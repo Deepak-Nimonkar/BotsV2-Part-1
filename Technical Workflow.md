@@ -23,7 +23,6 @@ Creates Backdoor Admin: kIagerfield
 * **Result:** Created rogue admin account **`kIagerfield`** (homograph attack using a capital `I` instead of an `l`) with password `beer_lulz` and `usergroup=4` (Admin).
 
 ###http
-
 POST /admin/index.php HTTP/1.1
 Host: [www.brewertalk.com](https://www.brewertalk.com)
 Cookie: [Kevin's Session Cookies]
@@ -40,7 +39,6 @@ Configuration Tampering (20:58:44 UTC): Submitted a modified configuration form 
 Session Termination: The attacker's web session abruptly ended at 20:58:45.446 UTC.
 
 ###Post-Exploitation & Rule-Out Analysis
-
 | Vector | Query / Source | Findings | Status |
 | :--- | :--- | :--- | :--- |
 | **Web Shell Upload** | `stream:http` (`uri_path="*usercp*" OR uri_path="*uploads*"`) | 0 requests to `usercp.php` or files inside `/uploads/` post-20:58:45. | **Ruled Out** |
