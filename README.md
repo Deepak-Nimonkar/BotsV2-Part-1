@@ -7,4 +7,9 @@ The threat actor executed a multi-stage attack involving **SQL Injection (SQLi)*
 
 ---
 
-
+### Primary Entry Vector
+* **Type:** Spear-Phishing + Reflected XSS (Leading to Session Hijacking / Account Creation)
+* **Sender:** `frankesters48@gmail.com` (`136.0.2.138`)
+* **Recipient:** `klagerfield@froth.ly`
+* **Vulnerable Endpoint:** `/admin/index.php?module=user-titles&action=edit&utid=2`
+* **Exploit Mechanism:** Reflected XSS injected via link parameter, stealing `my_post_key` from DOM and issuing an `XMLHttpRequest` to `/admin/index.php?module=user-users&action=add`.
