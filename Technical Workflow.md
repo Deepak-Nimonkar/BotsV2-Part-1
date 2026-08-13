@@ -22,7 +22,7 @@ Creates Backdoor Admin: kIagerfield
 * **Artifact:** The request carried Kevin's valid session cookie and anti-CSRF token (`my_post_key=1bc3eab741900ab25c98eee86bf20feb`).
 * **Result:** Created rogue admin account **`kIagerfield`** (homograph attack using a capital `I` instead of an `l`) with password `beer_lulz` and `usergroup=4` (Admin).
 
-##http
+###http
 
 POST /admin/index.php HTTP/1.1
 Host: [www.brewertalk.com](https://www.brewertalk.com)
@@ -31,7 +31,7 @@ Cookie: [Kevin's Session Cookies]
 my_post_key=1bc3eab741900ab25c98eee86bf20feb&username=kIagerfield&password=beer_lulz&confirm_password=beer_lulz&email=kIagerfield@froth.ly&usergroup=4
 
 
-##3. Unauthorized Administrative Access
+###3. Unauthorized Administrative Access
 
 Attacker IP: 136.0.2.138
 User-Agent: NaenaraBrowser/3.5b4 (Red Star OS browser identifier)
@@ -39,7 +39,7 @@ Login Event: 2017-08-16 20:57:15 UTC via /member.php.
 Configuration Tampering (20:58:44 UTC): Submitted a modified configuration form (gid=10) changing the avatar upload path (upsetting[avataruploadpath]=./uploads/avatars).
 Session Termination: The attacker's web session abruptly ended at 20:58:45.446 UTC.
 
-##Post-Exploitation & Rule-Out Analysis
+###Post-Exploitation & Rule-Out Analysis
 
 | Vector | Query / Source | Findings | Status |
 | :--- | :--- | :--- | :--- |
